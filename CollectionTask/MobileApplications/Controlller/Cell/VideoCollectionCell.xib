@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,29 +16,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-X9-Mjc">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobile1" translatesAutoresizingMaskIntoConstraints="NO" id="tXC-G2-EeD">
                         <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
-                    </view>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1w-5h-2fh">
+                        <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.38046032229796151" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="youtube"/>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="xwd-X9-Mjc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IWk-zq-XWg"/>
-                <constraint firstAttribute="trailing" secondItem="xwd-X9-Mjc" secondAttribute="trailing" id="Lhb-TP-9Kl"/>
-                <constraint firstAttribute="bottom" secondItem="xwd-X9-Mjc" secondAttribute="bottom" id="eAi-Dg-Ckr"/>
-                <constraint firstItem="xwd-X9-Mjc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="y3m-lA-9hb"/>
+                <constraint firstItem="tXC-G2-EeD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1Ya-3r-Ady"/>
+                <constraint firstAttribute="trailing" secondItem="tXC-G2-EeD" secondAttribute="trailing" id="7FT-NT-Dq2"/>
+                <constraint firstItem="L1w-5h-2fh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IYO-kR-6bS"/>
+                <constraint firstItem="tXC-G2-EeD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KJT-hr-H5U"/>
+                <constraint firstAttribute="bottom" secondItem="tXC-G2-EeD" secondAttribute="bottom" id="N5t-49-LWy"/>
+                <constraint firstAttribute="trailing" secondItem="L1w-5h-2fh" secondAttribute="trailing" id="VlI-pq-dt8"/>
+                <constraint firstAttribute="bottom" secondItem="L1w-5h-2fh" secondAttribute="bottom" id="dNo-2z-JSb"/>
+                <constraint firstItem="L1w-5h-2fh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dST-xq-I8E"/>
             </constraints>
             <size key="customSize" width="201" height="179"/>
-            <connections>
-                <outlet property="VideoView" destination="xwd-X9-Mjc" id="QLS-G1-kTZ"/>
-            </connections>
             <point key="canvasLocation" x="254.19847328244273" y="65.140845070422543"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="mobile1" width="364" height="408"/>
+        <image name="youtube" width="32" height="32"/>
     </resources>
 </document>

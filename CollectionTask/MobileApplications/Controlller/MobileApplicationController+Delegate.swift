@@ -18,7 +18,6 @@ extension MobileApplicationController : UICollectionViewDelegate , UICollectionV
         case 0:
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MobileApplicationCell", for: indexPath) as? MobileApplicationCell else {fatalError("Unable deque cell...")}
-            print(currentCollection ?? 0)
             cell.mobileAppImage.image = UIImage(named: "mobile1")
             return cell
             
@@ -26,13 +25,14 @@ extension MobileApplicationController : UICollectionViewDelegate , UICollectionV
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCollectionCell", for: indexPath) as? VideoCollectionCell else {fatalError("Unable deque cell...")}
             return cell
+            
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MobileApplicationCell", for: indexPath) as? MobileApplicationCell else {fatalError("Unable deque cell...")}
             print(currentCollection ?? 0)
             cell.mobileAppImage.image = UIImage(named: "mobile1")
             return cell
         }
-       
+        
     }
     
 }

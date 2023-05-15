@@ -8,7 +8,5 @@
 import UIKit
 
 class VideoCollectionCell: UICollectionViewCell {
-
-    @IBOutlet weak var VideoView: UIView!
     
 }
