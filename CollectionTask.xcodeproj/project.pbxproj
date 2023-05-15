@@ -14,6 +14,9 @@
 		DD5A831A2A12565A0007420E /* MobileApplicationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A83182A1256590007420E /* MobileApplicationCell.swift */; };
 		DD5A831B2A12565A0007420E /* MobileApplicationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5A83192A1256590007420E /* MobileApplicationCell.xib */; };
 		DD5A831D2A12592B0007420E /* MobileApplicationController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A831C2A12592B0007420E /* MobileApplicationController+Delegate.swift */; };
+		DD5A83222A12657D0007420E /* VideoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A83202A12657D0007420E /* VideoCollectionCell.swift */; };
+		DD5A83232A12657D0007420E /* VideoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5A83212A12657D0007420E /* VideoCollectionCell.xib */; };
+		DD5A83252A1275650007420E /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A83242A1275650007420E /* VideoData.swift */; };
 		DD638C682A111732002A0B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD638C672A111732002A0B37 /* AppDelegate.swift */; };
 		DD638C6A2A111732002A0B37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD638C692A111732002A0B37 /* SceneDelegate.swift */; };
 		DD638C6C2A111732002A0B37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD638C6B2A111732002A0B37 /* ViewController.swift */; };
@@ -33,6 +36,9 @@
 		DD5A83182A1256590007420E /* MobileApplicationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileApplicationCell.swift; sourceTree = "<group>"; };
 		DD5A83192A1256590007420E /* MobileApplicationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileApplicationCell.xib; sourceTree = "<group>"; };
 		DD5A831C2A12592B0007420E /* MobileApplicationController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MobileApplicationController+Delegate.swift"; sourceTree = "<group>"; };
+		DD5A83202A12657D0007420E /* VideoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionCell.swift; sourceTree = "<group>"; };
+		DD5A83212A12657D0007420E /* VideoCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionCell.xib; sourceTree = "<group>"; };
+		DD5A83242A1275650007420E /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
 		DD638C642A111732002A0B37 /* CollectionTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD638C672A111732002A0B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD638C692A111732002A0B37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +68,6 @@
 				D5FCF5B647E53361B3B07A81 /* Pods-CollectionTask.debug.xcconfig */,
 				09D09F605346D3C385E774B1 /* Pods-CollectionTask.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +145,7 @@
 		DD5A830D2A124D330007420E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DD5A83242A1275650007420E /* VideoData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +163,8 @@
 			children = (
 				DD5A83182A1256590007420E /* MobileApplicationCell.swift */,
 				DD5A83192A1256590007420E /* MobileApplicationCell.xib */,
+				DD5A83202A12657D0007420E /* VideoCollectionCell.swift */,
+				DD5A83212A12657D0007420E /* VideoCollectionCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -204,7 +212,6 @@
 				DD638C602A111732002A0B37 /* Sources */,
 				DD638C612A111732002A0B37 /* Frameworks */,
 				DD638C622A111732002A0B37 /* Resources */,
-				80EE81722258F67E38771A3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD638C742A111733002A0B37 /* LaunchScreen.storyboard in Resources */,
+				DD5A83232A12657D0007420E /* VideoCollectionCell.xib in Resources */,
 				DD5A82DA2A1210620007420E /* MobileApplications.storyboard in Resources */,
 				DD638C712A111733002A0B37 /* Assets.xcassets in Resources */,
 				DD638C6F2A111732002A0B37 /* Main.storyboard in Resources */,
@@ -286,23 +294,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		80EE81722258F67E38771A3E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollectionTask/Pods-CollectionTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollectionTask/Pods-CollectionTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CollectionTask/Pods-CollectionTask-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -315,8 +306,10 @@
 				DD5A82D32A120EAF0007420E /* ViewController+CollectionDelegate.swift in Sources */,
 				DD5A831D2A12592B0007420E /* MobileApplicationController+Delegate.swift in Sources */,
 				DD638C682A111732002A0B37 /* AppDelegate.swift in Sources */,
+				DD5A83252A1275650007420E /* VideoData.swift in Sources */,
 				DD638C6A2A111732002A0B37 /* SceneDelegate.swift in Sources */,
 				DD5A831A2A12565A0007420E /* MobileApplicationCell.swift in Sources */,
+				DD5A83222A12657D0007420E /* VideoCollectionCell.swift in Sources */,
 				DD638C7C2A111863002A0B37 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

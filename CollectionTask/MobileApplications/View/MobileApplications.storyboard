@@ -46,8 +46,8 @@
                                 <rect key="frame" x="53" y="123" width="286" height="32"/>
                                 <color key="backgroundColor" red="0.71372549019999998" green="0.062745098040000002" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
-                                    <segment title="Videos"/>
                                     <segment title="Images"/>
+                                    <segment title="Videos"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
