@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RSk-vD-tbT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sk1-ni-hMt">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ndw-CP-Ukl">
-                                <rect key="frame" x="0.0" y="172" width="393" height="680"/>
+                                <rect key="frame" x="0.0" y="208" width="393" height="644"/>
                                 <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J7G-Bs-QQz">
                                     <size key="itemSize" width="144" height="123"/>
@@ -42,68 +42,39 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="o09-px-exd"/>
                                 </connections>
                             </collectionView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eOZ-Ik-0gY">
-                                <rect key="frame" x="53" y="123" width="286" height="32"/>
-                                <color key="backgroundColor" red="0.71372549019999998" green="0.062745098040000002" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <segments>
-                                    <segment title="Images"/>
-                                    <segment title="Videos"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAu-lY-9MO" customClass="ImageVideosCustomSegment" customModule="CollectionTask" customModuleProvider="target">
+                                <rect key="frame" x="40" y="118" width="313" height="63"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="313" id="htv-bh-RG9"/>
+                                    <constraint firstAttribute="height" constant="63" id="o6t-Ao-zFa"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="SegmentAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="y6X-LS-iqa"/>
+                                    <action selector="customSegment:" destination="Y6W-OH-hqX" eventType="valueChanged" id="q3D-ON-Fjz"/>
                                 </connections>
-                            </segmentedControl>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1jp-lL-bVG"/>
-                            <constraint firstAttribute="bottom" secondItem="ndw-CP-Ukl" secondAttribute="bottom" id="Fsb-di-fYJ"/>
-                            <constraint firstItem="eOZ-Ik-0gY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="PRd-aU-cwc"/>
-                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="top" secondItem="eOZ-Ik-0gY" secondAttribute="bottom" constant="18" id="azb-ot-drd"/>
-                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ecu-Ic-YQR"/>
-                            <constraint firstItem="eOZ-Ik-0gY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="53" id="iLZ-ny-ogR"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eOZ-Ik-0gY" secondAttribute="trailing" constant="54" id="wkD-3p-uhD"/>
+                            <constraint firstAttribute="bottom" secondItem="ndw-CP-Ukl" secondAttribute="bottom" id="Cnl-sL-WsJ"/>
+                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="MWj-aT-GgZ"/>
+                            <constraint firstItem="wAu-lY-9MO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Muf-Ez-pdi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wAu-lY-9MO" secondAttribute="trailing" constant="40" id="aOs-e6-obh"/>
+                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hsT-5c-3CD"/>
+                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="top" secondItem="wAu-lY-9MO" secondAttribute="bottom" constant="27" id="n7l-83-lfT"/>
+                            <constraint firstItem="wAu-lY-9MO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="uW2-th-mAh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mobile Applications" id="wgB-sY-UCk"/>
                     <connections>
+                        <outlet property="CustomSegment" destination="wAu-lY-9MO" id="KvK-SC-eZX"/>
                         <outlet property="collectionView" destination="ndw-CP-Ukl" id="FSt-IE-Pbr"/>
-                        <outlet property="segmentControl" destination="eOZ-Ik-0gY" id="cEB-ml-Cit"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
-        </scene>
-        <!--Try View Controller-->
-        <scene sceneID="hGe-wa-a91">
-            <objects>
-                <viewController id="RSk-vD-tbT" customClass="tryViewController" customModule="CollectionTask" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yEI-G0-gWP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAu-lY-9MO" customClass="ImageVideosCustomSegment" customModule="CollectionTask" customModuleProvider="target">
-                                <rect key="frame" x="13" y="89" width="364" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <action selector="Action:" destination="RSk-vD-tbT" eventType="valueChanged" id="GI4-AL-WG7"/>
-                                </connections>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="t5g-on-Cn9"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="Segment" destination="wAu-lY-9MO" id="bgV-mj-KnC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xAM-jW-2lF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1961.0687022900763" y="-13.380281690140846"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ev4-0J-YNW">
@@ -136,9 +107,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

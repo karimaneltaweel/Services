@@ -14,7 +14,7 @@ extension MobileApplicationController : UICollectionViewDelegate , UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch segmentControl.selectedSegmentIndex{
+        switch CustomSegment.selectedIndex{
         case 0:
             
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MobileApplicationCell", for: indexPath) as? MobileApplicationCell else {fatalError("Unable deque cell...")}
