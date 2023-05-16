@@ -9,8 +9,6 @@ import UIKit
 
 class MobileApplicationController: UIViewController {
     
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    
     
     @IBOutlet weak var CustomSegment: ImageVideosCustomSegment!
     @IBOutlet weak var collectionView: UICollectionView!

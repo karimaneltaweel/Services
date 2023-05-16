@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ndw-CP-Ukl">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ndw-CP-Ukl">
                                 <rect key="frame" x="0.0" y="208" width="393" height="644"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J7G-Bs-QQz">
                                     <size key="itemSize" width="144" height="123"/>
@@ -33,7 +34,9 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8ba-VB-SPE">
                                             <rect key="frame" x="0.0" y="0.0" width="144" height="123"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="144" height="123"/>
                                     </collectionViewCell>
                                 </cells>
@@ -42,13 +45,10 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="o09-px-exd"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAu-lY-9MO" customClass="ImageVideosCustomSegment" customModule="CollectionTask" customModuleProvider="target">
-                                <rect key="frame" x="40" y="118" width="313" height="63"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAu-lY-9MO" customClass="ImageVideosCustomSegment" customModule="CollectionTask" customModuleProvider="target">
+                                <rect key="frame" x="30" y="122" width="313" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="313" id="htv-bh-RG9"/>
-                                    <constraint firstAttribute="height" constant="63" id="o6t-Ao-zFa"/>
-                                </constraints>
                                 <connections>
                                     <action selector="customSegment:" destination="Y6W-OH-hqX" eventType="valueChanged" id="q3D-ON-Fjz"/>
                                 </connections>
@@ -56,15 +56,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ndw-CP-Ukl" secondAttribute="bottom" id="Cnl-sL-WsJ"/>
-                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="MWj-aT-GgZ"/>
-                            <constraint firstItem="wAu-lY-9MO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Muf-Ez-pdi"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wAu-lY-9MO" secondAttribute="trailing" constant="40" id="aOs-e6-obh"/>
-                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hsT-5c-3CD"/>
-                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="top" secondItem="wAu-lY-9MO" secondAttribute="bottom" constant="27" id="n7l-83-lfT"/>
-                            <constraint firstItem="wAu-lY-9MO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="uW2-th-mAh"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mobile Applications" id="wgB-sY-UCk"/>
                     <connections>

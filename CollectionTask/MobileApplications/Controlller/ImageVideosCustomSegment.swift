@@ -10,6 +10,7 @@ import UIKit
     
     private var labels = [UILabel]()
     var thumbView = UIView()
+//    var labelUi = UILabel()
     var items : [String] = ["Images","Videos"]{
         didSet{
             setupLabels()
@@ -17,7 +18,6 @@ import UIKit
     }
     //select------property
     var selectedIndex : Int = 0{
-        
         didSet{
             displayNewSelectedIndex()
         }
@@ -33,23 +33,23 @@ import UIKit
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
-        
+
     }
     
     // MARK: - Helpers
     
     func setupLabels(){
         
-        for label in labels{
-            label.removeFromSuperview()
-            labels.removeAll()
-        }
-        
+//        for label in labels{
+//            label.removeFromSuperview()
+//            labels.removeAll()
+//        }
+
         for index in 0..<items.count{
             let label = UILabel(frame: CGRectZero)
             label.text = items [index]
             label.textAlignment = .center
-            label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             self.addSubview(label)
             labels.append(label)
         }
@@ -57,6 +57,7 @@ import UIKit
     
     func displayNewSelectedIndex(){
         var label = labels[selectedIndex]
+        label.textColor = .white
         self.thumbView.frame = label.frame
     }
     
@@ -64,7 +65,7 @@ import UIKit
         layer.cornerRadius = frame.height/2
         layer.borderColor = UIColor(white: 0.5, alpha: 1.0).cgColor
         layer.borderWidth = 2
-        backgroundColor = #colorLiteral(red: 0.7137254902, green: 0.06274509804, blue: 0.1098039216, alpha: 1)
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         setupLabels()
         insertSubview(thumbView, at: 0)
         
@@ -76,10 +77,12 @@ import UIKit
          
          let segmentWidth = bounds.width / CGFloat(items.count)
          let touchedSegmentIndex = Int(touchLocation.x / segmentWidth)
-         
+         let label = labels[selectedIndex]
+        
          if touchedSegmentIndex != selectedIndex {
              selectedIndex = touchedSegmentIndex
              sendActions(for: .valueChanged)
+             label.textColor = .black
          }
     }
     
@@ -89,7 +92,7 @@ import UIKit
         let newWidth = CGRectGetWidth(selectedFrame)/CGFloat(items.count)
         selectedFrame.size.width = newWidth
         thumbView.frame = selectedFrame
-        thumbView.backgroundColor = #colorLiteral(red: 0.9647058845, green: 0.9647058845, blue: 0.9647058845, alpha: 1)
+        thumbView.backgroundColor = #colorLiteral(red: 0.7137254902, green: 0.06274509804, blue: 0.1098039216, alpha: 1)
         thumbView.layer.cornerRadius = thumbView.frame.height / 2
         let labelHeight = self.bounds.height
         let labelWidth = self.bounds.width / CGFloat(labels.count)

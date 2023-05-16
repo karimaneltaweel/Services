@@ -81,14 +81,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD5A82D42A120F270007420E /* Serives */ = {
+		DD5A82D42A120F270007420E /* services */ = {
 			isa = PBXGroup;
 			children = (
 				DD5A82D72A120F670007420E /* Model */,
 				DD5A82D62A120F520007420E /* Controller */,
 				DD5A82D52A120F430007420E /* View */,
 			);
-			path = Serives;
+			path = services;
 			sourceTree = "<group>";
 		};
 		DD5A82D52A120F430007420E /* View */ = {
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				DD5A830B2A124CE50007420E /* MobileApplications */,
-				DD5A82D42A120F270007420E /* Serives */,
+				DD5A82D42A120F270007420E /* services */,
 				DD638C672A111732002A0B37 /* AppDelegate.swift */,
 				DD638C692A111732002A0B37 /* SceneDelegate.swift */,
 				DD638C702A111733002A0B37 /* Assets.xcassets */,

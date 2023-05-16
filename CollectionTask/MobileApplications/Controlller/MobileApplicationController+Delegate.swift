@@ -27,6 +27,7 @@ extension MobileApplicationController : UICollectionViewDelegate , UICollectionV
             return cell
             
         default:
+            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MobileApplicationCell", for: indexPath) as? MobileApplicationCell else {fatalError("Unable deque cell...")}
             cell.mobileAppImage.image = UIImage(named: "mobile1")
             return cell
@@ -36,14 +37,17 @@ extension MobileApplicationController : UICollectionViewDelegate , UICollectionV
     
 }
 
+
 extension MobileApplicationController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width , height:collectionView.frame.size.height*0.6)
+        
+        return CGSize(width: collectionView.frame.width - 30 , height:collectionView.frame.size.height*0.6)
         
     }
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    //            return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    //        }
+    
+            func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+                    return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+                }
     
 }
