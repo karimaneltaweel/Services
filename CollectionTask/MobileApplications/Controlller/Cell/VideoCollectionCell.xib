@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobile1" translatesAutoresizingMaskIntoConstraints="NO" id="tXC-G2-EeD">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobile1" translatesAutoresizingMaskIntoConstraints="NO" id="tXC-G2-EeD">
                         <rect key="frame" x="0.0" y="0.0" width="201" height="179"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1w-5h-2fh">
@@ -44,6 +44,6 @@
     </objects>
     <resources>
         <image name="mobile1" width="364" height="408"/>
-        <image name="youtube" width="32" height="32"/>
+        <image name="youtube" width="64" height="64"/>
     </resources>
 </document>

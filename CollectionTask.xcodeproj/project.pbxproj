@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8A192C4401C5CE7752BD2D1B /* Pods_CollectionTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7E207F35BAB05ECE2487B5 /* Pods_CollectionTask.framework */; };
+		DD18C0002A134E7200B03AFD /* tryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD18BFFF2A134E7200B03AFD /* tryViewController.swift */; };
+		DD59BCD52A12CCF5002E5AB3 /* ImageVideosCustomSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD59BCD42A12CCF5002E5AB3 /* ImageVideosCustomSegment.swift */; };
 		DD5A82D32A120EAF0007420E /* ViewController+CollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A82D22A120EAF0007420E /* ViewController+CollectionDelegate.swift */; };
 		DD5A82DA2A1210620007420E /* MobileApplications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5A82D92A1210620007420E /* MobileApplications.storyboard */; };
 		DD5A83102A124E7D0007420E /* MobileApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A830F2A124E7D0007420E /* MobileApplicationController.swift */; };
@@ -30,6 +32,8 @@
 		09D09F605346D3C385E774B1 /* Pods-CollectionTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionTask.release.xcconfig"; path = "Target Support Files/Pods-CollectionTask/Pods-CollectionTask.release.xcconfig"; sourceTree = "<group>"; };
 		1C7E207F35BAB05ECE2487B5 /* Pods_CollectionTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollectionTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FCF5B647E53361B3B07A81 /* Pods-CollectionTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollectionTask.debug.xcconfig"; path = "Target Support Files/Pods-CollectionTask/Pods-CollectionTask.debug.xcconfig"; sourceTree = "<group>"; };
+		DD18BFFF2A134E7200B03AFD /* tryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tryViewController.swift; sourceTree = "<group>"; };
+		DD59BCD42A12CCF5002E5AB3 /* ImageVideosCustomSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVideosCustomSegment.swift; sourceTree = "<group>"; };
 		DD5A82D22A120EAF0007420E /* ViewController+CollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionDelegate.swift"; sourceTree = "<group>"; };
 		DD5A82D92A1210620007420E /* MobileApplications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MobileApplications.storyboard; sourceTree = "<group>"; };
 		DD5A830F2A124E7D0007420E /* MobileApplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileApplicationController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				DD5A83112A1253680007420E /* Cell */,
 				DD5A830F2A124E7D0007420E /* MobileApplicationController.swift */,
 				DD5A831C2A12592B0007420E /* MobileApplicationController+Delegate.swift */,
+				DD59BCD42A12CCF5002E5AB3 /* ImageVideosCustomSegment.swift */,
 			);
 			path = Controlller;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				DD638C702A111733002A0B37 /* Assets.xcassets */,
 				DD638C722A111733002A0B37 /* LaunchScreen.storyboard */,
 				DD638C752A111733002A0B37 /* Info.plist */,
+				DD18BFFF2A134E7200B03AFD /* tryViewController.swift */,
 			);
 			path = CollectionTask;
 			sourceTree = "<group>";
@@ -309,7 +315,9 @@
 				DD5A83252A1275650007420E /* VideoData.swift in Sources */,
 				DD638C6A2A111732002A0B37 /* SceneDelegate.swift in Sources */,
 				DD5A831A2A12565A0007420E /* MobileApplicationCell.swift in Sources */,
+				DD18C0002A134E7200B03AFD /* tryViewController.swift in Sources */,
 				DD5A83222A12657D0007420E /* VideoCollectionCell.swift in Sources */,
+				DD59BCD52A12CCF5002E5AB3 /* ImageVideosCustomSegment.swift in Sources */,
 				DD638C7C2A111863002A0B37 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,5 +13,12 @@ class MobileApplicationCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    override func layoutSublayers(of layer: CALayer) {
+        super.layoutSublayers(of: layer)
+        self.layer.cornerRadius = 20
+        self.layer.masksToBounds = true
+        
+    }
 
 }

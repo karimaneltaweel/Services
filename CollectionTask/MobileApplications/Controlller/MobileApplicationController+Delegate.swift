@@ -28,7 +28,6 @@ extension MobileApplicationController : UICollectionViewDelegate , UICollectionV
             
         default:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MobileApplicationCell", for: indexPath) as? MobileApplicationCell else {fatalError("Unable deque cell...")}
-            print(currentCollection ?? 0)
             cell.mobileAppImage.image = UIImage(named: "mobile1")
             return cell
         }
