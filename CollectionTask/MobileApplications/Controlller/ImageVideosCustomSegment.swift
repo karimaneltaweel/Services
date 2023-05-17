@@ -10,7 +10,7 @@ import UIKit
     
     private var labels = [UILabel]()
     var thumbView = UIView()
-//    var labelUi = UILabel()
+    //    var labelUi = UILabel()
     var items : [String] = ["Images","Videos"]{
         didSet{
             setupLabels()
@@ -33,23 +33,18 @@ import UIKit
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
-
+        
     }
     
     // MARK: - Helpers
     
     func setupLabels(){
         
-//        for label in labels{
-//            label.removeFromSuperview()
-//            labels.removeAll()
-//        }
-
+        
         for index in 0..<items.count{
             let label = UILabel(frame: CGRectZero)
             label.text = items [index]
             label.textAlignment = .center
-//            label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             self.addSubview(label)
             labels.append(label)
         }
@@ -71,19 +66,22 @@ import UIKit
         
     }
     
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         guard let touchLocation = touches.first?.location(in: self) else { return }
-         
-         let segmentWidth = bounds.width / CGFloat(items.count)
-         let touchedSegmentIndex = Int(touchLocation.x / segmentWidth)
-         let label = labels[selectedIndex]
         
-         if touchedSegmentIndex != selectedIndex {
-             selectedIndex = touchedSegmentIndex
-             sendActions(for: .valueChanged)
-             label.textColor = .black
-         }
+        let segmentWidth = bounds.width / CGFloat(items.count)
+        let touchedSegmentIndex = Int(touchLocation.x / segmentWidth)
+        let label = labels[selectedIndex]
+        
+        if touchedSegmentIndex != selectedIndex {
+            print("\(touchedSegmentIndex)")
+            print("\(touchedSegmentIndex)")
+            selectedIndex = touchedSegmentIndex
+            sendActions(for: .valueChanged)
+            label.textColor = .black
+        }
     }
     
     override func layoutSubviews() {
@@ -101,7 +99,7 @@ import UIKit
             var label = labels[index]
             let xPosition = CGFloat(index) * labelWidth
             label.frame = CGRectMake(xPosition, 0, labelWidth, labelHeight)
-
+            
         }
     }
 }

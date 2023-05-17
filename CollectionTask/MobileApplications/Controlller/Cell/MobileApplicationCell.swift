@@ -8,7 +8,7 @@
 import UIKit
 
 class MobileApplicationCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var mobileAppImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +20,5 @@ class MobileApplicationCell: UICollectionViewCell {
         self.layer.masksToBounds = true
         
     }
-
+    
 }

@@ -7,26 +7,34 @@
 
 import UIKit
 
-class MobileApplicationController: UIViewController {
+class MobileApplicationController: UIViewController , HeaderDelegate {
     
+    var segmentHeaderIndex : Int?
     
-    @IBOutlet weak var CustomSegment: ImageVideosCustomSegment!
+    var headerInstance = HeaderController()
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        headerInstance.delegate = self
+        
         collectionView.register(UINib(nibName: "MobileApplicationCell", bundle: nil), forCellWithReuseIdentifier: "MobileApplicationCell")
         collectionView.register(UINib(nibName: "VideoCollectionCell", bundle: nil), forCellWithReuseIdentifier: "VideoCollectionCell")
     }
     
-    
-    
-    
-    @IBAction func customSegment(_ sender: Any) {
+    func didSelectSegmentedControl(selectedNumber: Int) {
+        segmentHeaderIndex = selectedNumber
         collectionView.reloadData()
-        
     }
     
     
+    
+    
+    
+    
+    
 }
+
 

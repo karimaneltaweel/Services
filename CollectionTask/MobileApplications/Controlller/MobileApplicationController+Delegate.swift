@@ -14,15 +14,13 @@ extension MobileApplicationController : UICollectionViewDelegate , UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch CustomSegment.selectedIndex{
+        switch segmentHeaderIndex {
         case 0:
-            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MobileApplicationCell", for: indexPath) as? MobileApplicationCell else {fatalError("Unable deque cell...")}
             cell.mobileAppImage.image = UIImage(named: "mobile1")
             return cell
             
         case 1:
-            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCollectionCell", for: indexPath) as? VideoCollectionCell else {fatalError("Unable deque cell...")}
             return cell
             
@@ -46,8 +44,27 @@ extension MobileApplicationController : UICollectionViewDelegateFlowLayout {
         
     }
     
-            func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-                    return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-                }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            
+            let headerView = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: "HeaderController",
+                for: indexPath)
+            
+            guard let typedHeaderView = headerView as? HeaderController
+            else { return headerView }
+            
+            typedHeaderView.addSubview(typedHeaderView.segmentHeader)
+            
+            typedHeaderView.delegate = self
+            
+            return typedHeaderView
+        default:
+            assert(false, "Invalid element type")
+        }
+        
+    }
     
 }

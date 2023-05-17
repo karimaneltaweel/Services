@@ -17,19 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ndw-CP-Ukl">
-                                <rect key="frame" x="0.0" y="208" width="393" height="644"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ndw-CP-Ukl">
+                                <rect key="frame" x="0.0" y="113" width="393" height="739"/>
                                 <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J7G-Bs-QQz">
                                     <size key="itemSize" width="144" height="123"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="313" height="100"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="1X4-7l-z0R">
-                                        <rect key="frame" x="0.0" y="0.0" width="144" height="123"/>
+                                        <rect key="frame" x="0.0" y="100" width="144" height="123"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8ba-VB-SPE">
                                             <rect key="frame" x="0.0" y="0.0" width="144" height="123"/>
@@ -40,26 +39,45 @@
                                         <size key="customSize" width="144" height="123"/>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderController" id="bsd-0i-B7T" customClass="HeaderController" customModule="CollectionTask" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAu-lY-9MO" customClass="ImageVideosCustomSegment" customModule="CollectionTask" customModuleProvider="target">
+                                            <rect key="frame" x="40" y="19" width="313" height="63"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <connections>
+                                                <action selector="segmentAction:" destination="bsd-0i-B7T" eventType="valueChanged" id="hDl-fY-A0i"/>
+                                            </connections>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wAu-lY-9MO" firstAttribute="leading" secondItem="bsd-0i-B7T" secondAttribute="leadingMargin" constant="32" id="B3e-V9-605"/>
+                                        <constraint firstItem="wAu-lY-9MO" firstAttribute="top" secondItem="bsd-0i-B7T" secondAttribute="topMargin" constant="11" id="V7A-xL-iSf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wAu-lY-9MO" secondAttribute="trailing" constant="32" id="Vre-sT-gXZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wAu-lY-9MO" secondAttribute="bottom" constant="10" id="iKD-bn-QUW"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="segmentHeader" destination="wAu-lY-9MO" id="9Ay-gA-m4v"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="3iE-gP-gGk"/>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="o09-px-exd"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAu-lY-9MO" customClass="ImageVideosCustomSegment" customModule="CollectionTask" customModuleProvider="target">
-                                <rect key="frame" x="30" y="122" width="313" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <action selector="customSegment:" destination="Y6W-OH-hqX" eventType="valueChanged" id="q3D-ON-Fjz"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.96470588450000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="WKo-Ll-1aK"/>
+                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="d6t-4j-Fce"/>
+                            <constraint firstItem="ndw-CP-Ukl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uY3-7H-oBD"/>
+                            <constraint firstAttribute="bottom" secondItem="ndw-CP-Ukl" secondAttribute="bottom" id="zdS-u4-057"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mobile Applications" id="wgB-sY-UCk"/>
                     <connections>
-                        <outlet property="CustomSegment" destination="wAu-lY-9MO" id="KvK-SC-eZX"/>
                         <outlet property="collectionView" destination="ndw-CP-Ukl" id="FSt-IE-Pbr"/>
                     </connections>
                 </viewController>
