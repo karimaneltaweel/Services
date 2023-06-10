@@ -11,14 +11,12 @@ class MobileApplicationController: UIViewController , HeaderDelegate {
     
     var segmentHeaderIndex : Int?
     
-    var headerInstance = HeaderController()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headerInstance.delegate = self
         
         collectionView.register(UINib(nibName: "MobileApplicationCell", bundle: nil), forCellWithReuseIdentifier: "MobileApplicationCell")
         collectionView.register(UINib(nibName: "VideoCollectionCell", bundle: nil), forCellWithReuseIdentifier: "VideoCollectionCell")
